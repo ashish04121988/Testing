@@ -36,4 +36,8 @@ public class EmployeeService {
     public void delete(long id) {
         employeeDB.deleteById(id);
     }
+    
+    public List<Employee> findByDesignation(String designation) {
+        return employeeDB.findByDesignation(designation);
+    }
 }
