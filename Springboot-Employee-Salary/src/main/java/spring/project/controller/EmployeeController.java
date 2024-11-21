@@ -47,7 +47,7 @@ public class EmployeeController {
     public ModelAndView showEditEmployeePage(@PathVariable(name = "id") int id){
         ModelAndView mav = new ModelAndView("edit_employee");
         Employee employee1= employeeService.get(id);
-        mav.addObject("employee", employee1);
+        mav.addObject("employee", new Employee());
 
         return mav;
     }
