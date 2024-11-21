@@ -58,4 +58,9 @@ public class EmployeeController {
 
         return "redirect:/";
     }
+    
+    @GetMapping("/designation/{designation}")
+    public List<Employee> getEmployeesByDesignation(@PathVariable String designation) {
+        return employeeService.findByDesignation(designation);
+    }
 }

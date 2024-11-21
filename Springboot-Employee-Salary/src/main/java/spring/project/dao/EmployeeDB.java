@@ -11,5 +11,7 @@ import spring.project.model.Employee;
  */
 
 public interface EmployeeDB extends JpaRepository<Employee, Long> {
+	
+	List<Employee> findByDesignation(String designation);
 
 }
